@@ -1,5 +1,11 @@
-import 'package:schema/schema.dart' as schema;
+import 'package:schema/schema.dart';
 
 void main(List<String> arguments) {
-  print('Hello world: ${schema.calculate()}!');
+  const person = Person(
+    context: 'https://schema.org/',
+    name: 'Jane Doe',
+    jobTitle: 'Software Architect',
+  );
+
+  print('Created Schema.org Person: ${person.toJson()}');
 }
